@@ -9,7 +9,7 @@ import os
 from typing import Optional
 
 import torch
-from xformers.ops import AttentionBias
+# from xformers.ops import AttentionBias
 
 from qserve.utils.llava_image_processing import (
     process_images,
@@ -198,7 +198,7 @@ class InputMetadata:
         self.kv_cache_dtype = kv_cache_dtype
 
         # Set during the execution of the first attention op.
-        self.attn_bias: Optional[AttentionBias] = None
+        self.attn_bias = None
 
         self.activation_buffer = ActivationBuffer(model, batched_seq_len, self.run_vlm)
         self.activation_buffer.allocate_activation_buffer()
