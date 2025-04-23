@@ -13,8 +13,8 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
-    "accelerate", "sentencepiece", "tokenizers>=0.12.1",
-    "torch>=2.0.0", "torchvision", 
+    "accelerate", "sentencepiece", "tokenizers==0.21.1",
+    "torch==2.3.0", "torchvision", 
     "transformers==4.47.1", "datasets",
     "lm_eval==0.3.0", "texttable",
     "toml", "attributedict",
